@@ -17,7 +17,7 @@ jose.rodrigues@pg.inatel.br, jose.e.f.rodrigues.br@gmail.com
 ### Documentação: 
 https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_1_2
 
-## Class diagram
+## Diagrma de classes
 
 <img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_1_2/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
 
