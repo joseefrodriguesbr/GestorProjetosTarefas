@@ -1,4 +1,4 @@
-# LogisticaDM112
+# Gestor de Projetos e Tarefas
 
 # Pós-Graduação em Desenvolvimento Mobile e Cloud Computing – Inatel
 ## DM106 - Desenvolvimento de Web Services com segurança sob plataforma .NET
