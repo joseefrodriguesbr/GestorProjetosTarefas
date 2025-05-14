@@ -11,7 +11,7 @@ internal class Program
 
         while (!exit)
         {
-            Console.WriteLine("Você chegou na Empresa de Projetos!\n");
+            Console.WriteLine("Você chegou no Gestor de Projetos e Tarefas!\n");
             Console.WriteLine("Digite 1 para registrar um empregado");
             Console.WriteLine("Digite 2 para registrar a tarefa de um empregado");
             Console.WriteLine("Digite 3 para mostrar todos os empregados");
@@ -43,7 +43,7 @@ internal class Program
                     Console.WriteLine("Opção inválida.");
                     break;
             }
-            Thread.Sleep(1500);
+            Thread.Sleep(2000);
             Console.Clear();
         }
     }
@@ -85,8 +85,10 @@ internal class Program
             string nome = Console.ReadLine();
             Console.Write($"Informe a descrição da tarefa {nome}: ");
             string descricao = Console.ReadLine();
+            Console.Write($"Informe a duração da tarefa {nome} em dias : ");
+            int duracaoDias = int.Parse(Console.ReadLine());
             //Equipment Equipment = EquipmentList[EquipmentName];
-            empregado.adicionarTarefas (new Tarefa(nome, descricao));
+            empregado.adicionarTarefas (new Tarefa(nome, descricao, duracaoDias));
             Console.WriteLine($"A tarefa {nome} do { empregado.Nome} foi registrada com sucesso!");
         }
         else Console.WriteLine($"\nO empregado de matrícula {matricula} não foi encontrado");

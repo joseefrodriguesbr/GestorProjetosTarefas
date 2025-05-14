@@ -22,7 +22,7 @@ namespace GestorProjetosTarefas_Console
 
         public override string ToString()
         {
-            return $@"Empregado: {Nome}";
+            return $@"Empregado: {Nome} , Matrícula: {Matricula}";
         }
 
         public void adicionarTarefas(Tarefa tarefa)
