@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestorProjetosTarefas_Console
+namespace Empresa_Console
 {
-    internal class Tarefa
+    public class Tarefa
     {
         public string Nome {  get; set; }
 
