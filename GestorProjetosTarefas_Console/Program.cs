@@ -1,11 +1,24 @@
 ﻿using GestorProjetosTarefas_Console;
+using GestorProjetosTarefas.Shared.Data;
+using GestorProjetosTarefas.Shared.Data.BD;
 
 internal class Program
 {
     public static Dictionary<string, Empregado> EmpregadoList = new();
     private static void Main(string[] args)
     {
-       
+        try
+        {
+            using var connection = new Connection().Connect();
+            connection.Open();
+            Console.WriteLine(connection.State);
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+        return;
 
         bool exit = false;
 

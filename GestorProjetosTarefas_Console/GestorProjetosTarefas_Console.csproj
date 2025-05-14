@@ -15,4 +15,13 @@
     <IsPublishable>True</IsPublishable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GestorProjetosTarefas.Shared.Data\GestorProjetosTarefas.Shared.Data.csproj" />
+    <ProjectReference Include="..\GestorProjetosTarefas.Shared.Models\GestorProjetosTarefas.Shared.Models.csproj" />
+  </ItemGroup>
+
 </Project>

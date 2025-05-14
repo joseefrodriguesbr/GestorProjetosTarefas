@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestorProjetosTarefas_Console
 {
-    internal class Tarefa
+    public class Tarefa
     {
         public string Nome {  get; set; }
 
