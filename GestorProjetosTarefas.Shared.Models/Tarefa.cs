@@ -8,11 +8,15 @@ namespace GestorProjetosTarefas_Console
 {
     public class Tarefa
     {
+        public int Id { get; set; }
+
         public string Nome {  get; set; }
 
         public string Descricao { get; set; }
 
         public int DuracaoDias { get; set; }
+
+        public virtual Empregado? Empregado { get; set; }
 
         public Tarefa(string nome, string descricao, int duracaoDias)
         {
@@ -23,7 +27,7 @@ namespace GestorProjetosTarefas_Console
 
         public override string ToString()
         {
-            return $@"Tarefa: {Nome} , descricao: {Descricao} , duração em dias: {DuracaoDias}";
+            return $@"Id: {Id} ,Tarefa: {Nome} , descricao: {Descricao} , duração em dias: {DuracaoDias}";
         }
     }
 }

@@ -8,9 +8,12 @@ namespace GestorProjetosTarefas_Console
 {
     public class Empregado
     {
+        public int Id { get; set; }
         public string Nome { get; set; }
 
         public string Matricula { get; set; }
+
+        public virtual ICollection<Tarefa> Tarefa { get; set; } = new List<Tarefa>();
 
         private List<Tarefa> Tarefas = new();
 
@@ -22,20 +25,20 @@ namespace GestorProjetosTarefas_Console
 
         public override string ToString()
         {
-            return $@"Empregado: {Nome} , Matrícula: {Matricula}";
+            return $@"Id: {Id} , Empregado: {Nome} , Matrícula: {Matricula}";
         }
 
         public void adicionarTarefas(Tarefa tarefa)
         {
-            Tarefas.Add(tarefa);
+            Tarefa.Add(tarefa);
         }
 
         public void showTarefas()
         {
             Console.WriteLine($"Tarefas do empregado:{Nome}");
-            if (Tarefas.Count > 0)
+            if (Tarefa.Count > 0)
             {
-                foreach (Tarefa tarefa in Tarefas)
+                foreach (Tarefa tarefa in Tarefa)
                 {
                     Console.WriteLine(tarefa);
                 }

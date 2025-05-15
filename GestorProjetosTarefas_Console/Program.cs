@@ -7,23 +7,13 @@ internal class Program
     public static Dictionary<string, Empregado> EmpregadoList = new();
     private static void Main(string[] args)
     {
-        try
-        {
-            using var connection = new Connection().Connect();
-            connection.Open();
-            Console.WriteLine(connection.State);
-        }
-        catch(Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-
-        return;
+        var EmpregadoDAL = new DAL<Empregado>();
 
         bool exit = false;
 
         while (!exit)
         {
+            Console.Clear();
             Console.WriteLine("Você chegou no Gestor de Projetos e Tarefas!\n");
             Console.WriteLine("Digite 1 para registrar um empregado");
             Console.WriteLine("Digite 2 para registrar a tarefa de um empregado");
@@ -56,67 +46,80 @@ internal class Program
                     Console.WriteLine("Opção inválida.");
                     break;
             }
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
+            //Console.Clear();
+        }
+
+        void RegistrarEmpregado()
+        {
             Console.Clear();
-        }
-    }
-
-    private static void ObterTarefas()
-    {
-        Console.Clear();
-        Console.WriteLine("Exibir detalhes do empregado\n");
-        Console.Write("Digite o empregado cujas tarefas deseja consultar: ");
-        string matricula = Console.ReadLine();
-        if (EmpregadoList.ContainsKey(matricula))
-        {
-            Empregado empregado = EmpregadoList[matricula];
-            empregado.showTarefas();
-        }
-        else Console.WriteLine($"\nO empregado de matrícula {matricula} não foi encontrado");
-    }
-
-    private static void ObterEmpregados()
-    {
-        Console.Clear();
-        Console.WriteLine("Lista de empregados:\n");
-        foreach (var empregado in EmpregadoList.Values)
-        {
-            Console.WriteLine(empregado);
-        }
-    }
-
-    private static void RegistrarTarefa()
-    {
-        Console.Clear();
-        Console.WriteLine("Registro de Tarefas\n");
-        Console.Write("Digite o matrícula do empregado cuja categoria deseja registrar: ");
-        string matricula = Console.ReadLine();
-        if (EmpregadoList.ContainsKey(matricula))
-        {
-            Empregado empregado = EmpregadoList[matricula];
-            Console.Write($"Informe o nome da tarefa do empregado {empregado.Nome}: ");
+            Console.WriteLine("Registro de Empregados\n");
+            Console.Write("Digite o nome do empregado que deseja registrar: ");
             string nome = Console.ReadLine();
-            Console.Write($"Informe a descrição da tarefa {nome}: ");
-            string descricao = Console.ReadLine();
-            Console.Write($"Informe a duração da tarefa {nome} em dias : ");
-            int duracaoDias = int.Parse(Console.ReadLine());
-            //Equipment Equipment = EquipmentList[EquipmentName];
-            empregado.adicionarTarefas (new Tarefa(nome, descricao, duracaoDias));
-            Console.WriteLine($"A tarefa {nome} do { empregado.Nome} foi registrada com sucesso!");
+            Console.Write("Digite a matricula do empregado que deseja registrar: ");
+            string matricula = Console.ReadLine();
+            Empregado empregado = new(nome, matricula);
+            //EmpregadoList.Add(matricula, empregado);
+            EmpregadoDAL.Create(empregado);
+            Console.WriteLine($"O empregado {nome} foi registrado com sucesso!");
+            Console.ReadKey();
         }
-        else Console.WriteLine($"\nO empregado de matrícula {matricula} não foi encontrado");
+
+        void ObterEmpregados()
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de empregados:\n");
+            foreach (var empregado in EmpregadoDAL.Read())
+            {
+                Console.WriteLine(empregado);
+            }
+            Console.ReadKey();
+        }
+
+        void ObterTarefas()
+        {
+            Console.Clear();
+            Console.WriteLine("Exibir detalhes do empregado\n");
+            Console.Write("Digite o empregado cujas tarefas deseja consultar: ");
+            string matricula = Console.ReadLine();
+            var targetEmpregado = EmpregadoDAL.ReadBy(x => x.Matricula.Equals(matricula));
+
+            if (targetEmpregado is not null)
+            {
+                targetEmpregado.showTarefas();
+            }
+            else Console.WriteLine($"\nO empregado de matrícula {matricula} não foi encontrado");
+            Console.ReadKey();
+        }
+
+        void RegistrarTarefa()
+        {
+            Console.Clear();
+            Console.WriteLine("registro de tarefas\n");
+            Console.WriteLine("digite o matrícula do empregado cuja categoria deseja registrar: ");
+            string matricula = Console.ReadLine();
+            var targetEmpregado = EmpregadoDAL.ReadBy(x=>x.Matricula.Equals(matricula));
+
+            if (targetEmpregado is not null)
+            {
+                Console.WriteLine($"informe o nome da tarefa do empregado {targetEmpregado.Nome}: ");
+                string nome = Console.ReadLine();
+                Console.WriteLine($"informe a descrição da tarefa {nome}: ");
+                string descricao = Console.ReadLine();
+                Console.WriteLine($"informe a duração da tarefa {nome} em dias : ");
+                int duracaodias = int.Parse(Console.ReadLine());
+                //equipment equipment = equipmentlist[equipmentname];
+                targetEmpregado.adicionarTarefas(new Tarefa(nome, descricao, duracaodias));
+                EmpregadoDAL.Update(targetEmpregado);
+                Console.WriteLine($"a tarefa {nome} do {targetEmpregado.Nome} foi registrada com sucesso!");
+            }
+            else Console.WriteLine($"\no empregado de matrícula {matricula} não foi encontrado");
+            Console.ReadKey();
+        }
+
     }
 
-    private static void RegistrarEmpregado()
-    {
-        Console.Clear();
-        Console.WriteLine("Registro de Empregados\n");
-        Console.Write("Digite o nome do empregado que deseja registrar: ");
-        string nome = Console.ReadLine();
-        Console.Write("Digite a matricula do empregado que deseja registrar: ");
-        string matricula = Console.ReadLine();
-        Empregado empregado = new Empregado(nome, matricula);
-        EmpregadoList.Add(matricula, empregado);
-        Console.WriteLine($"O empregado {nome} foi registrado com sucesso!");
-    }
+
+
+
 }
