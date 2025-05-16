@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A9EBE8-79AA-472D-91A9-53B570D80B65}|GestorProjetosTarefas_API\\GestorProjetosTarefas_API.csproj|c:\\projetos\\inatel\\projetos\\visualstudio\\dm106\\gestorprojetostarefas_aula_2_4\\gestorprojetostarefas_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1A9EBE8-79AA-472D-91A9-53B570D80B65}|GestorProjetosTarefas_API\\GestorProjetosTarefas_API.csproj|solutionrelative:gestorprojetostarefas_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26AE035D-BADE-4CDF-939A-FC9106A087AC}|GestorProjetosTarefas_Console\\GestorProjetosTarefas_Console.csproj|c:\\projetos\\inatel\\projetos\\visualstudio\\dm106\\gestorprojetostarefas_aula_2_4\\gestorprojetostarefas_console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26AE035D-BADE-4CDF-939A-FC9106A087AC}|GestorProjetosTarefas_Console\\GestorProjetosTarefas_Console.csproj|solutionrelative:gestorprojetostarefas_console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas_API\\Program.cs",
+              "RelativeDocumentMoniker": "GestorProjetosTarefas_API\\Program.cs",
+              "ToolTip": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas_API\\Program.cs",
+              "RelativeToolTip": "GestorProjetosTarefas_API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:06:05.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas_Console\\Program.cs",
+              "RelativeDocumentMoniker": "GestorProjetosTarefas_Console\\Program.cs",
+              "ToolTip": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas_Console\\Program.cs",
+              "RelativeToolTip": "GestorProjetosTarefas_Console\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:06:02.947Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

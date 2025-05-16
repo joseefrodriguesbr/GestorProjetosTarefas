@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GestorProjetosTarefas_API.props" />
+</Project>
