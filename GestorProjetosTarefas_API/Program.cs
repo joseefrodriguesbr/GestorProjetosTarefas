@@ -8,6 +8,7 @@ builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options =
 
 var app = builder.Build();
 
+//teste da requisição GET
 app.MapGet("/", () =>
 {
     var dal = new DAL<Empregado>();
