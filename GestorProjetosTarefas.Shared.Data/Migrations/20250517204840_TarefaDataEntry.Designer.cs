@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestorProjetosTarefas.Shared.Data.Migrations
 {
     [DbContext(typeof(GestorProjetosTarefasContext))]
-    [Migration("20250515072959_TarefaDataEntry")]
+    [Migration("20250517204840_TarefaDataEntry")]
     partial class TarefaDataEntry
     {
         /// <inheritdoc />
@@ -20,11 +20,14 @@ namespace GestorProjetosTarefas.Shared.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "9.0.4")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("GestorProjetosTarefas_Console.Empregado", b =>
+            modelBuilder.Entity("GestorProjetosTarefas.Shared.Models.Empregado", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,7 +48,7 @@ namespace GestorProjetosTarefas.Shared.Data.Migrations
                     b.ToTable("Empregado");
                 });
 
-            modelBuilder.Entity("GestorProjetosTarefas_Console.Tarefa", b =>
+            modelBuilder.Entity("GestorProjetosTarefas.Shared.Models.Tarefa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -74,13 +77,18 @@ namespace GestorProjetosTarefas.Shared.Data.Migrations
                     b.ToTable("Tarefa");
                 });
 
-            modelBuilder.Entity("GestorProjetosTarefas_Console.Tarefa", b =>
+            modelBuilder.Entity("GestorProjetosTarefas.Shared.Models.Tarefa", b =>
                 {
-                    b.HasOne("GestorProjetosTarefas_Console.Empregado", "Empregado")
-                        .WithMany()
+                    b.HasOne("GestorProjetosTarefas.Shared.Models.Empregado", "Empregado")
+                        .WithMany("Tarefa")
                         .HasForeignKey("EmpregadoId");
 
                     b.Navigation("Empregado");
+                });
+
+            modelBuilder.Entity("GestorProjetosTarefas.Shared.Models.Empregado", b =>
+                {
+                    b.Navigation("Tarefa");
                 });
 #pragma warning restore 612, 618
         }

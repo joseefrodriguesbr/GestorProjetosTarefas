@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestorProjetosTarefas_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4774e44723456ef9dca8bc8a7a2ce1502cbcf247")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e9a827be40106dd5c15cbd9b354fa990b9ae38f")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestorProjetosTarefas_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestorProjetosTarefas_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

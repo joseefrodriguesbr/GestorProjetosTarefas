@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 using GestorProjetosTarefas.Shared.Data.BD;
-using GestorProjetosTarefas_Console;
+using GestorProjetosTarefas.Shared.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

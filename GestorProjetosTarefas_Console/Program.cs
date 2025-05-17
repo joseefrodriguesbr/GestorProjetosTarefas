@@ -1,4 +1,4 @@
-﻿using GestorProjetosTarefas_Console;
+﻿using GestorProjetosTarefas.Shared.Models;
 using GestorProjetosTarefas.Shared.Data;
 using GestorProjetosTarefas.Shared.Data.BD;
 

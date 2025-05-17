@@ -3,8 +3,19 @@
   "WorkspaceRootPath": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1A9EBE8-79AA-472D-91A9-53B570D80B65}|GestorProjetosTarefas_API\\GestorProjetosTarefas_API.csproj|c:\\projetos\\inatel\\projetos\\visualstudio\\dm106\\gestorprojetostarefas_aula_2_4\\gestorprojetostarefas_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1A9EBE8-79AA-472D-91A9-53B570D80B65}|GestorProjetosTarefas_API\\GestorProjetosTarefas_API.csproj|solutionrelative:gestorprojetostarefas_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/GestorProjetosTarefas_BD_V1/True/SqlTable/dbo.Tarefa.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08EAD2EE-6A01-4EA2-8390-D02BFAD1820C}|GestorProjetosTarefas.Shared.Data\\GestorProjetosTarefas.Shared.Data.csproj|c:\\projetos\\inatel\\projetos\\visualstudio\\dm106\\gestorprojetostarefas_aula_2_4\\gestorprojetostarefas.shared.data\\migrations\\20250517204840_tarefadataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08EAD2EE-6A01-4EA2-8390-D02BFAD1820C}|GestorProjetosTarefas.Shared.Data\\GestorProjetosTarefas.Shared.Data.csproj|solutionrelative:gestorprojetostarefas.shared.data\\migrations\\20250517204840_tarefadataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08EAD2EE-6A01-4EA2-8390-D02BFAD1820C}|GestorProjetosTarefas.Shared.Data\\GestorProjetosTarefas.Shared.Data.csproj|c:\\projetos\\inatel\\projetos\\visualstudio\\dm106\\gestorprojetostarefas_aula_2_4\\gestorprojetostarefas.shared.data\\migrations\\20250515072640_relateempregadotarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08EAD2EE-6A01-4EA2-8390-D02BFAD1820C}|GestorProjetosTarefas.Shared.Data\\GestorProjetosTarefas.Shared.Data.csproj|solutionrelative:gestorprojetostarefas.shared.data\\migrations\\20250515072640_relateempregadotarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204729_RelateEmpregadoTarefa2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204729_RelateEmpregadoTarefa2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +34,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas_API\\Program.cs",
-              "RelativeDocumentMoniker": "GestorProjetosTarefas_API\\Program.cs",
-              "ToolTip": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas_API\\Program.cs",
-              "RelativeToolTip": "GestorProjetosTarefas_API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Title": "dbo.Tarefa [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/GestorProjetosTarefas_BD_V1/True/SqlTable/dbo.Tarefa.sql",
+              "ToolTip": "dbo.Tarefa [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-17T20:49:12.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250517204840_TarefaDataEntry.cs",
+              "DocumentMoniker": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204840_TarefaDataEntry.cs",
+              "RelativeDocumentMoniker": "GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204840_TarefaDataEntry.cs",
+              "ToolTip": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204840_TarefaDataEntry.cs",
+              "RelativeToolTip": "GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204840_TarefaDataEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAACeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T05:23:59.573Z",
+              "WhenOpened": "2025-05-17T20:48:41.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250515072640_RelateEmpregadoTarefa.cs",
+              "DocumentMoniker": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas.Shared.Data\\Migrations\\20250515072640_RelateEmpregadoTarefa.cs",
+              "RelativeDocumentMoniker": "GestorProjetosTarefas.Shared.Data\\Migrations\\20250515072640_RelateEmpregadoTarefa.cs",
+              "ToolTip": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas.Shared.Data\\Migrations\\20250515072640_RelateEmpregadoTarefa.cs",
+              "RelativeToolTip": "GestorProjetosTarefas.Shared.Data\\Migrations\\20250515072640_RelateEmpregadoTarefa.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T20:47:35.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250517204729_RelateEmpregadoTarefa2.cs",
+              "DocumentMoniker": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204729_RelateEmpregadoTarefa2.cs",
+              "RelativeDocumentMoniker": "GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204729_RelateEmpregadoTarefa2.cs",
+              "ToolTip": "C:\\projetos\\inatel\\projetos\\visualstudio\\DM106\\GestorProjetosTarefas_Aula_2_4\\GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204729_RelateEmpregadoTarefa2.cs",
+              "RelativeToolTip": "GestorProjetosTarefas.Shared.Data\\Migrations\\20250517204729_RelateEmpregadoTarefa2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T20:47:29.792Z",
               "EditorCaption": ""
             }
           ]
