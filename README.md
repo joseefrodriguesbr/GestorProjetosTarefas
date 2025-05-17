@@ -13,10 +13,10 @@ jose.rodrigues@pg.inatel.br, jose.e.f.rodrigues.br@gmail.com
 
 * Integração com ORM Entity Framework
 * Classes Context e DAL de Shared.Data
-* Desenvolva uma DAL genérica
-* Crie um novo banco com Migrations, alimentando-o com dados
-* Crie a relação entre as classes (1:N) utilizando Migrations e Proxies
-* Configure e teste o método GET na sua API
+* Desenvolvimento de DAL genérica
+* Criação de um novo banco com Migrations, alimentando-o com dados
+* Criação da relação entre as classes (1:N) utilizando Migrations e Proxies
+* Configuração e teste do método GET na API
 
 ### Documentação: 
 [https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_1_2](https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_2_4)
