@@ -13,9 +13,11 @@ namespace GestorProjetosTarefas.Shared.Models
 
         public string Matricula { get; set; }
 
-        public virtual ICollection<Tarefa> Tarefa { get; set; } = new List<Tarefa>();
+        public virtual ICollection<Tarefa> Tarefas { get; set; } = new List<Tarefa>();
 
-        private List<Tarefa> Tarefas = new();
+        public virtual ICollection<Projeto> Projetos { get; set; }
+
+        //private List<Tarefa> Tarefas = new();
 
         public Empregado(string nome, string matricula)
         {
@@ -30,15 +32,15 @@ namespace GestorProjetosTarefas.Shared.Models
 
         public void adicionarTarefas(Tarefa tarefa)
         {
-            Tarefa.Add(tarefa);
+            Tarefas.Add(tarefa);
         }
 
         public void showTarefas()
         {
             Console.WriteLine($"Tarefas do empregado:{Nome}");
-            if (Tarefa.Count > 0)
+            if (Tarefas.Count > 0)
             {
-                foreach (Tarefa tarefa in Tarefa)
+                foreach (Tarefa tarefa in Tarefas)
                 {
                     Console.WriteLine(tarefa);
                 }
