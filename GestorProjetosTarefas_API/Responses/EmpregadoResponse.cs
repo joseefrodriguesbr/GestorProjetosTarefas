@@ -1,4 +1,4 @@
-﻿namespace GestorProjetosTarefas_API.Requests
+﻿namespace GestorProjetosTarefas_API.Responses
 {
     public record EmpregadoResponse(int id, string nome, string matricula);
     

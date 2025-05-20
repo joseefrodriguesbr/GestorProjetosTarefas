@@ -1,5 +1,7 @@
 ﻿using GestorProjetosTarefas.Shared.Data.BD;
 using GestorProjetosTarefas.Shared.Models;
+using GestorProjetosTarefas_API.Requests;
+using GestorProjetosTarefas_API.Responses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GestorProjetosTarefas_API.Endoints
@@ -10,14 +12,18 @@ namespace GestorProjetosTarefas_API.Endoints
         {
             app.MapGet("/Tarefa", ([FromServices] DAL<Tarefa> dal) =>
             {
-                return Results.Ok(dal.Read());
+                var tarefaList = dal.Read();
+                if (tarefaList == null) return Results.NotFound();
+
+                var empregagoResponseList = EntityListToResponseList(tarefaList);
+                return Results.Ok(empregagoResponseList);
             }
             );
 
-            app.MapPost("/Tarefa", ([FromServices] DAL<Tarefa> dal, [FromBody] Tarefa tarefa) =>
+            app.MapPost("/Tarefa", ([FromServices] DAL<Tarefa> dal, [FromBody] TarefaRequest tarefa) =>
             {
 
-                dal.Create(tarefa);
+                dal.Create(new Tarefa(tarefa.nome,tarefa.descricao,tarefa.duracaoDias));
                 return Results.Created();
             }
             );
@@ -35,18 +41,28 @@ namespace GestorProjetosTarefas_API.Endoints
             }
             );
 
-            app.MapPut("/Tarefa", ([FromServices] DAL<Tarefa> dal, [FromBody] Tarefa tarefa) =>
+            app.MapPut("/Tarefa", ([FromServices] DAL<Tarefa> dal, [FromBody] TarefaEditRequest tarefa) =>
             {
-                var tarefaEdit = dal.ReadBy(t => t.Id == tarefa.Id);
+                var tarefaEdit = dal.ReadBy(t => t.Id == tarefa.id);
                 if (tarefaEdit is null) return Results.NotFound();
 
-                tarefaEdit.Nome = tarefa.Nome;
-                tarefaEdit.Descricao = tarefa.Descricao;
-                tarefaEdit.DuracaoDias = tarefa.DuracaoDias;
+                tarefaEdit.Nome = tarefa.nome;
+                tarefaEdit.Descricao = tarefa.descricao;
+                tarefaEdit.DuracaoDias = tarefa.duracaoDias;
                 dal.Update(tarefaEdit);
                 return Results.Created();
             }
             );
+        }
+
+        private static ICollection<TarefaResponse> EntityListToResponseList(IEnumerable<Tarefa> entities)
+        {
+            return entities.Select(a => EntityToResponse(a)).ToList();
+        }
+
+        private static TarefaResponse EntityToResponse(Tarefa entity)
+        {
+            return new TarefaResponse(entity.Id, entity.Nome, entity.Descricao, entity.DuracaoDias);
         }
     }
 }

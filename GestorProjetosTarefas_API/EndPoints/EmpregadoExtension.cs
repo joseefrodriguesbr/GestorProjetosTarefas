@@ -3,6 +3,7 @@ using GestorProjetosTarefas.Shared.Data.BD;
 using GestorProjetosTarefas_API.Requests;
 using GestorProjetosTarefas.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
+using GestorProjetosTarefas_API.Responses;
 
 namespace GestorProjetosTarefas_API.Endoints
 {
