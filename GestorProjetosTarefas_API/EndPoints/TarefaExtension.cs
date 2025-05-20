@@ -1,5 +1,5 @@
 ﻿using GestorProjetosTarefas.Shared.Data.BD;
-using GestorProjetosTarefas_Console;
+using GestorProjetosTarefas.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GestorProjetosTarefas_API.Endoints
