@@ -17,8 +17,6 @@ namespace GestorProjetosTarefas.Shared.Models
 
         public virtual ICollection<Projeto> Projetos { get; set; }
 
-        //private List<Tarefa> Tarefas = new();
-
         public Empregado(string nome, string matricula)
         {
             Nome = nome;
