@@ -10,9 +10,9 @@ namespace GestorProjetosTarefas.Shared.Data.BD
      {
         private readonly GestorProjetosTarefasContext context;
 
-        public DAL()
+        public DAL(GestorProjetosTarefasContext context) 
         {
-            this.context = new GestorProjetosTarefasContext();
+            this.context = context;
         }
 
         public void Create(T value)
