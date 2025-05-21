@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GestorProjetosTarefas.Shared.Data.Models;
 using GestorProjetosTarefas.Shared.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace GestorProjetosTarefas.Shared.Data.BD
 {
-    public class GestorProjetosTarefasContext : DbContext
+    public class GestorProjetosTarefasContext : IdentityDbContext<AccessUser, AccessRole, int>
     {
         public DbSet<Empregado> Empregado { get; set; }
 
@@ -33,6 +35,7 @@ namespace GestorProjetosTarefas.Shared.Data.BD
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Empregado>().HasMany(e => e.Projetos).WithMany(p=>p.Empregado);
         }
     }

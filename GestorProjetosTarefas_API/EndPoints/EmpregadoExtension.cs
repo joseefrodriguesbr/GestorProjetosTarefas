@@ -12,8 +12,9 @@ namespace GestorProjetosTarefas_API.Endoints
 
         public static void AddEndPointsEmpregado(this WebApplication app)
         {
+            var groupBuilder = app.MapGroup("empregado").RequireAuthorization().WithTags("Empregados");
 
-            app.MapGet("/Empregado", ([FromServices] DAL<Empregado> dal) =>
+            groupBuilder.MapGet("", ([FromServices] DAL<Empregado> dal) =>
             {
                 var empregadoList = dal.Read();
                 if (empregadoList == null)return Results.NotFound();
@@ -24,14 +25,14 @@ namespace GestorProjetosTarefas_API.Endoints
             }
             );
 
-            app.MapGet("/Empregado/{id}", (int id, [FromServices] DAL<Empregado> dal) =>
+            groupBuilder.MapGet("/{id}", (int id, [FromServices] DAL<Empregado> dal) =>
             {
                 var empregadp = dal.ReadBy(e => e.Id == id);
                 if (empregadp is null) return Results.NotFound();
                 return Results.Ok(EntityToResponse(empregadp));
             });
 
-            app.MapPost("/Empregado", ([FromServices] DAL<Empregado> dal, [FromServices] DAL<Projeto> projetodal, [FromBody] EmpregadoRequest empregado) =>
+            groupBuilder.MapPost("", ([FromServices] DAL<Empregado> dal, [FromServices] DAL<Projeto> projetodal, [FromBody] EmpregadoRequest empregado) =>
             {
                 dal.Create(
                    new Empregado(empregado.nome, empregado.matricula)
@@ -45,7 +46,7 @@ namespace GestorProjetosTarefas_API.Endoints
             }
             );
 
-            app.MapDelete("/Empregado/{id}", ([FromServices] DAL<Empregado> dal, int id) =>
+            groupBuilder.MapDelete("/{id}", ([FromServices] DAL<Empregado> dal, int id) =>
             {
                 var empregado = dal.ReadBy(e => e.Id == id);
                 if (empregado is null)
@@ -58,7 +59,7 @@ namespace GestorProjetosTarefas_API.Endoints
             }
             );
 
-            app.MapPut("/Empregado", ([FromServices] DAL<Empregado> dal, [FromBody] EmpregadoEditRequest empregado) =>
+            groupBuilder.MapPut("", ([FromServices] DAL<Empregado> dal, [FromBody] EmpregadoEditRequest empregado) =>
             {
                 var empregadoEdit = dal.ReadBy(e => e.Id == empregado.id);
                 if (empregadoEdit is null) return Results.NotFound();
@@ -71,7 +72,6 @@ namespace GestorProjetosTarefas_API.Endoints
             );
 
         }
-
 
         private static List<Projeto> ProjetoRequestConvert(ICollection<ProjetoRequest> projList, DAL<Projeto> projdal)
         {

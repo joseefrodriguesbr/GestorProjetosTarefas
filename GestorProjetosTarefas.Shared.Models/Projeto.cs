@@ -18,7 +18,6 @@ namespace GestorProjetosTarefas.Shared.Models
 
         public virtual ICollection<Empregado> Empregado { get; set; }
 
-
         public override string ToString()
         {
             return $@"Id: {Id} , Nome: {Nome} , Detalhe: {Detalhe}, Orcamento: {Orcamento}";
