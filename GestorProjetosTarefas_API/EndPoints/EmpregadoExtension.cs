@@ -24,9 +24,23 @@ namespace GestorProjetosTarefas_API.Endoints
             }
             );
 
-            app.MapPost("/Empregado", ([FromServices] DAL<Empregado> dal, [FromBody] EmpregadoRequest empregado) =>
+            app.MapGet("/Empregado/{id}", (int id, [FromServices] DAL<Empregado> dal) =>
             {
-                dal.Create(new Empregado(empregado.nome,empregado.matricula));
+                var empregadp = dal.ReadBy(e => e.Id == id);
+                if (empregadp is null) return Results.NotFound();
+                return Results.Ok(EntityToResponse(empregadp));
+            });
+
+            app.MapPost("/Empregado", ([FromServices] DAL<Empregado> dal, [FromServices] DAL<Projeto> projetodal, [FromBody] EmpregadoRequest empregado) =>
+            {
+                dal.Create(
+                   new Empregado(empregado.nome, empregado.matricula)
+                   {
+                       Projetos = empregado.Projetos is not null ?
+                       ProjetoRequestConvert(empregado.Projetos, projetodal) :
+                       new List<Projeto>()
+                   }
+               );
                 return Results.Created();
             }
             );
@@ -56,6 +70,25 @@ namespace GestorProjetosTarefas_API.Endoints
             }
             );
 
+        }
+
+
+        private static List<Projeto> ProjetoRequestConvert(ICollection<ProjetoRequest> projList, DAL<Projeto> projdal)
+        {
+            var projetoList = new List<Projeto>();
+            foreach (var item in projList)
+            {
+                var projeto = RequestToEntity(item);
+                var projetoBuscado = projdal.ReadBy(d => d.Nome.ToUpper().Equals(projeto.Nome.ToUpper()));
+                if (projetoBuscado is not null) projetoList.Add(projetoBuscado);
+                else projetoList.Add(projeto);
+            }
+            return projetoList;
+        }
+
+        private static Projeto RequestToEntity(ProjetoRequest projeto)
+        {
+            return new Projeto() { Nome = projeto.Nome, Detalhe = projeto.Detalhe, Orcamento = projeto.Orcamento};
         }
 
         private static ICollection<EmpregadoResponse> EntityListToResponseList(IEnumerable<Empregado> entities)
