@@ -91,7 +91,7 @@ namespace GestorProjetosTarefas_API.Endoints
             return new Projeto() { Nome = projeto.Nome, Detalhe = projeto.Detalhe, Orcamento = projeto.Orcamento};
         }
 
-        private static ICollection<EmpregadoResponse> EntityListToResponseList(IEnumerable<Empregado> entities)
+        public static ICollection<EmpregadoResponse> EntityListToResponseList(IEnumerable<Empregado> entities)
         {
             return entities.Select(a=>EntityToResponse(a)).ToList();
         }
