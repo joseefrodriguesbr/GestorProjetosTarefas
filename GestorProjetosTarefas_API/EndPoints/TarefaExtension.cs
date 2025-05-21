@@ -20,6 +20,13 @@ namespace GestorProjetosTarefas_API.Endoints
             }
             );
 
+            app.MapGet("/Tarefa/{id}", (int id, [FromServices] DAL<Tarefa> dal) =>
+            {
+                var tarefa = dal.ReadBy(t => t.Id == id);
+                if (tarefa is null) return Results.NotFound();
+                return Results.Ok(EntityToResponse(tarefa));
+            });
+
             app.MapPost("/Tarefa", ([FromServices] DAL<Tarefa> dal, [FromBody] TarefaRequest tarefa) =>
             {
 
