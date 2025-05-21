@@ -80,7 +80,7 @@ namespace GestorProjetosTarefas_API.Endoints
             {
                 var projeto = RequestToEntity(item);
                 var projetoBuscado = projdal.ReadBy(d => d.Nome.ToUpper().Equals(projeto.Nome.ToUpper()));
-                if (projetoBuscado is not null) projetoList.Add(projetoBuscado);
+                if (projetoBuscado is not null) projetoList.Add(projetoBuscado);                
                 else projetoList.Add(projeto);
             }
             return projetoList;

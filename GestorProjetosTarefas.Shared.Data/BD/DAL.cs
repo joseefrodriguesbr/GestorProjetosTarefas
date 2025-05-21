@@ -9,12 +9,18 @@ namespace GestorProjetosTarefas.Shared.Data.BD
     public class DAL<T> where T : class
      {
         private readonly GestorProjetosTarefasContext context;
+        
+        //public DAL()
+        //{
+        //    this.context = new GestorProjetosTarefasContext();
+        //}
+                
 
-        public DAL()
+
+        public DAL(GestorProjetosTarefasContext context) // ← Agora recebe por injeção
         {
-            this.context = new GestorProjetosTarefasContext();
+            this.context = context;
         }
-
         public void Create(T value)
         {
             context.Set<T>().Add(value);

@@ -7,7 +7,8 @@ internal class Program
     public static Dictionary<string, Empregado> EmpregadoList = new();
     private static void Main(string[] args)
     {
-        var EmpregadoDAL = new DAL<Empregado>();
+        using var context = new GestorProjetosTarefasContext();
+        var EmpregadoDAL = new DAL<Empregado>(context);
 
         bool exit = false;
 
