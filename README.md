@@ -21,7 +21,7 @@ https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2
 
 ## Diagrama de classes
 
-<img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_1_2/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
+<img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
 
 ## Implementação
 Gestor de Projetos e Tarefas: sistema que permite criar várias tarefas e alocar vários empregados com suas respectivas tarefas. 
