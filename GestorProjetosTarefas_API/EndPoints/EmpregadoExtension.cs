@@ -79,7 +79,7 @@ namespace GestorProjetosTarefas_API.Endoints
             foreach (var item in projList)
             {
                 var projeto = RequestToEntity(item);
-                var projetoBuscado = projdal.ReadBy(d => d.Nome.ToUpper().Equals(projeto.Nome.ToUpper()));
+                var projetoBuscado = projdal.ReadBy(p => p.Nome.ToUpper().Equals(projeto.Nome.ToUpper()));
                 if (projetoBuscado is not null) projetoList.Add(projetoBuscado);                
                 else projetoList.Add(projeto);
             }

@@ -25,7 +25,7 @@ namespace GestorProjetosTarefas_API.EndPoints
 
             groupBuilder.MapGet("/{id}", (int id, [FromServices] DAL<Projeto> dal) =>
             {
-                var projeto = dal.ReadBy(e => e.Id == id);
+                var projeto = dal.ReadBy(p => p.Id == id);
                 if (projeto is null) return Results.NotFound();
                 return Results.Ok(EntityToResponse(projeto));
             });
@@ -39,7 +39,7 @@ namespace GestorProjetosTarefas_API.EndPoints
 
             groupBuilder.MapDelete("/{id}", ([FromServices] DAL<Projeto> dal, int id) =>
             {
-                var projeto = dal.ReadBy(e => e.Id == id);
+                var projeto = dal.ReadBy(p => p.Id == id);
                 if (projeto is null)
                 {
                     return Results.NotFound();
@@ -52,7 +52,7 @@ namespace GestorProjetosTarefas_API.EndPoints
 
             groupBuilder.MapPut("", ([FromServices] DAL<Projeto> dal, [FromBody] ProjetoEditRequest projeto) =>
             {
-                var projetoEdit = dal.ReadBy(e => e.Id == projeto.id);
+                var projetoEdit = dal.ReadBy(p => p.Id == projeto.id);
                 if (projetoEdit is null) return Results.NotFound();
 
                 projetoEdit.Nome = projeto.nome;
