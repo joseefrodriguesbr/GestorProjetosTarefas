@@ -24,7 +24,7 @@ https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2
 <img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
 
 ## Implementação
-Gestor de Projetos e Tarefas: sistema que permite criar várias tarefas e alocar vários empregados com suas respectivas tarefas. 
+Gestor de Projetos e Tarefas: sistema que permite criar vários Projetos e alocar vários Empregados com suas respectivas Tarefas. 
 
 ### IDE
 - **Microsoft Visual Studio Community 2022 (64 bits) - 17.13.6**
