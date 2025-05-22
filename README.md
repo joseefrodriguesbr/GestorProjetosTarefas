@@ -23,7 +23,7 @@ jose.rodrigues@pg.inatel.br, jose.e.f.rodrigues.br@gmail.com
 
 ## Diagrama de classes
 
-<img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_1_2/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
+<img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_2_4/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
 
 ## Implementação
 Gestor de Projetos e Tarefas: sistema que permite criar vários Projetos e alocar vários Empregados com suas respectivas Tarefas. 
