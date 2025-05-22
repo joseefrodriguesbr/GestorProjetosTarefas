@@ -30,23 +30,7 @@ namespace GestorProjetosTarefas_API.EndPoints
                 var projeto = dal.ReadBy(p => p.Id == id);
                 if (projeto is null) return Results.NotFound();
                 return Results.Ok(EntityToResponse(projeto));
-            });
-
-            /*
-            groupBuilder.MapGet("/EmpregadosPorProjeto/{nomeProjeto}", (string nomeProjeto, [FromServices] DAL<Empregado> empregadoDal, [FromServices] DAL<Projeto> projetoDal) =>
-            {
-                var projeto = projetoDal.ReadBy(p => p.Nome.ToUpper() == nomeProjeto.ToUpper());
-
-                if (projeto == null)
-                    return Results.NotFound($"Projeto '{nomeProjeto}' não encontrado.");
-
-                var empregados = empregadoDal.Read().Where(e => e.Projetos != null && e.Projetos.Any(p => p.Id == projeto.Id));
-                
-                var response = EmpregadoExtension.EntityListToResponseList(empregados);
-;               
-                return Results.Ok(response);
-            });
-            */             
+            });        
 
             groupBuilder.MapPost("", ([FromServices] DAL<Projeto> dal, [FromBody] ProjetoRequest projeto) =>
             {
