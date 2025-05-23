@@ -9,6 +9,9 @@
 José Enderson Ferreira Rodrigues   
 jose.rodrigues@pg.inatel.br, jose.e.f.rodrigues.br@gmail.com
 
+## Implementação
+Gestor de Projetos e Tarefas: sistema que permite criar vários Projetos e alocar vários Empregados com suas respectivas Tarefas. 
+
 ### Atividade proposta: 
 
 * API completa com EndPoints utilizando DI.
@@ -33,9 +36,6 @@ https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2
 * https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_4_2
 
 * https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Final
-* 
-## Implementação
-Gestor de Projetos e Tarefas: sistema que permite criar vários Projetos e alocar vários Empregados com suas respectivas Tarefas. 
 
 ### IDE
 - **Microsoft Visual Studio Community 2022 (64 bits) - 17.13.6**
