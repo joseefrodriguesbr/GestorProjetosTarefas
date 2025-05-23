@@ -19,6 +19,17 @@ jose.rodrigues@pg.inatel.br, jose.e.f.rodrigues.br@gmail.com
 ### Documentação: 
 https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2
 
+## Projetos relacionados
+* https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_1_2
+
+* https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_2_4
+
+* https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2
+
+* https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_4_2
+
+* https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Final
+
 ## Diagrama de classes
 
 <img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
