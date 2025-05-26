@@ -20,7 +20,7 @@ Gestor de Projetos e Tarefas: sistema que permite criar vários Projetos e aloca
 * Criação do método de Logout
 
 ### Documentação: 
-https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_4_2
+https://github.com/joseefrodriguesbr/GestorProjetosTarefas/tree/Aula_4_2
 
 ## Diagrama de classes
 
