@@ -20,7 +20,7 @@ Gestor de Projetos e Tarefas: sistema que permite criar vários Projetos e aloca
 * Adicão da classe N:N
 
 ### Documentação: 
-https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_3_2
+https://github.com/joseefrodriguesbr/GestorProjetosTarefas/tree/Aula_3_2
 
 ## Diagrama de classes
 
