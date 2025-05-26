@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\GestorProjetosTarefas_API.props" />
-</Project>
