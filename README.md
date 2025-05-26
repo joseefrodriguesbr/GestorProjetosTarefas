@@ -18,7 +18,7 @@ jose.rodrigues@pg.inatel.br, jose.e.f.rodrigues.br@gmail.com
 Gestor de Projetos e Tarefas: sistema que permite criar vários Projetos e alocar vários Empregados com suas respectivas Tarefas. 
 
 ## Documentação: 
-https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_1_2
+https://github.com/joseefrodriguesbr/GestorProjetosTarefas/tree/Aula_1_2
 
 ## Diagrama de classes
 
