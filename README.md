@@ -22,7 +22,7 @@ Gestor de Projetos e Tarefas: sistema que permite criar vários Projetos e aloca
 * Configuração e teste do método GET na API
 
 ### Documentação: 
-[https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_1_2](https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_2_4)
+https://github.com/joseefrodriguesbr/GestorProjetosTarefas/tree/Aula_2_4
 
 ## Diagrama de classes
 
