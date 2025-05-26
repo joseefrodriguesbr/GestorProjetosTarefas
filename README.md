@@ -44,13 +44,13 @@ https://github.com/joseefrodriguesbr/GestorProjetosTarefas
 
 ## Diagrama de classes
 
-<img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Final/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
+<img style="margin-right: 30px" src="./ClassDiagram.jpg" width="600px" alt="Diagrama de Classes"/><br>
 
 ## Recursos da Microsoft Azure criados
-<img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas/blob/master/AzureRecursosCriados.jpg" width="1024px;" alt="Avatar"/><br>
+<img style="margin-right: 30px" src="./AzureRecursosCriados.jpg" width="1024px;" alt="Avatar"/><br>
 
 ## Recursos da Microsoft Azure excluídos após testes
-<img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas/blob/master/AzureRecursosExcluidos.jpg" width="1024px;" alt="Avatar"/><br>
+<img style="margin-right: 30px" src="./AzureRecursosExcluidos.jpg" width="1024px;" alt="Avatar"/><br>
 
 ## Projetos relacionados
 * https://github.com/joseefrodriguesbr/GestorProjetosTarefas/tree/Aula_1_2
