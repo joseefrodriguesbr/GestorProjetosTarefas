@@ -24,7 +24,7 @@ https://github.com/joseefrodriguesbr/GestorProjetosTarefas/tree/Aula_4_2
 
 ## Diagrama de classes
 
-<img style="margin-right: 30px" src="https://github.com/joseefrodriguesbr/GestorProjetosTarefas_Aula_4_2/blob/master/Class%20Diagram.jpg" width="600px;" alt="Avatar"/><br>
+<img style="margin-right: 30px" src="./ClassDiagram.jpg" width="600px;" alt="Avatar"/><br>
 
 ## Projetos relacionados
 * https://github.com/joseefrodriguesbr/GestorProjetosTarefas/tree/Aula_1_2
